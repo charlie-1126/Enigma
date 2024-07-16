@@ -129,8 +129,8 @@ def encrypt():
             fail()
             return
 
-        # 입력 텍스트의 유효성 검사 (알파벳과 공백만 허용)
-        if not all(c.isalpha() or c.isspace() for c in input_text):
+        # 입력 텍스트의 유효성 검사 (알파벳과 공백과 쉼표만 허용)
+        if not all(c.isalpha() or c.isspace() or c == ',' for c in input_text):
             messagebox.showinfo("실패", "알파벳과 공백만 입력 가능합니다.")
             return
 
